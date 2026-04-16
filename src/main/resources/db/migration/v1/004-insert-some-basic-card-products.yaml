@@ -1,0 +1,92 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-insert-basic-card-products
+      author: nongrataqqq
+      changes:
+        - insert:
+            tableName: card_products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: gen_random_uuid()
+              - column:
+                  name: card_name
+                  value: "Classic"
+              - column:
+                  name: description
+                  value: "Стандартная дебетовая карта с базовыми возможностями"
+              - column:
+                  name: is_active
+                  valueBoolean: true
+              - column:
+                  name: created_at
+                  valueComputed: NOW()
+              - column:
+                  name: updated_at
+                  valueComputed: NOW()
+
+        - insert:
+            tableName: card_products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: gen_random_uuid()
+              - column:
+                  name: card_name
+                  value: "Gold"
+              - column:
+                  name: description
+                  value: "Премиальная карта с повышенным кэшбэком и привилегиями"
+              - column:
+                  name: is_active
+                  valueBoolean: true
+              - column:
+                  name: created_at
+                  valueComputed: NOW()
+              - column:
+                  name: updated_at
+                  valueComputed: NOW()
+
+        - insert:
+            tableName: card_products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: gen_random_uuid()
+              - column:
+                  name: card_name
+                  value: "Platinum"
+              - column:
+                  name: description
+                  value: "Эксклюзивная карта для VIP-клиентов с максимальными привилегиями"
+              - column:
+                  name: is_active
+                  valueBoolean: true
+              - column:
+                  name: created_at
+                  valueComputed: NOW()
+              - column:
+                  name: updated_at
+                  valueComputed: NOW()
+
+        - insert:
+            tableName: card_products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: gen_random_uuid()
+              - column:
+                  name: card_name
+                  value: "Virtual"
+              - column:
+                  name: description
+                  value: "Виртуальная карта для онлайн-платежей"
+              - column:
+                  name: is_active
+                  valueBoolean: true
+              - column:
+                  name: created_at
+                  valueComputed: NOW()
+              - column:
+                  name: updated_at
+                  valueComputed: NOW()
